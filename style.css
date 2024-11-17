@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+  --main-font: "Montserrat", sans-serif;
+  --second-font: "Fraunces", serif;
+  --font-bold: 700;
+  --font-normal: 500;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  font-family: var(--main-font);
+  font-weight: var(--font-normal);
+}
+
+main {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: var(--cream);
+}
+
+.container {
+  width: 600px;
+  height: 450px;
+  display: flex;
+  border-radius: 10px;
+}
+
+section.hero {
+  width: 50%;
+  height: auto;
+  background-image: url(./images/image-product-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  overflow: hidden;
+  border-radius: 10px 0px 0px 10px;
+}
+
+section.text {
+  width: 50%;
+  padding: 30px;
+  /* border: 2px solid red; */
+  background-color: var(--white);
+  border-radius: 0px 10px 10px 0px;
+}
+
+.product {
+  color: var(--dark-grayish-blue);
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  color: var(--dark-blue);
+  margin-bottom: 2rem;
+  font-size: 36px;
+  line-height: 90%;
+  font-family: var(--second-font);
+  font-weight: var(--font-bold);
+}
+
+.description {
+  color: var(--dark-grayish-blue);
+  font-size: 15px;
+  margin-bottom: 24px;
+  line-height: 150%;
+}
+
+.price {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 15px;
+  color: var(--dark-cyan);
+  margin-bottom: 24px;
+  font-size: 36px;
+  font-weight: var(--font-bold);
+  font-family: var(--second-font);
+}
+
+.price del {
+  font-size: 14px;
+  color: var(--dark-grayish-blue);
+}
+
+.btn {
+  background-color: var(--dark-cyan);
+  padding: 12px;
+  text-align: center;
+  color: var(--white);
+  font-size: 16px;
+  border-radius: 10px;
+  font-weight: var(--font-bold);
+}
+
+.btn:hover {
+  background-color: hsl(156, 42%, 18%);
+  cursor: pointer;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    flex-direction: column;
+    width: 300px;
+    height: 100vh;
+  }
+  section.hero,
+  section.text {
+    width: 100%;
+  }
+
+  section.hero {
+    height: 200px;
+    border: 2px solid red;
+    background-image: url(./images/image-product-mobile.jpg);
+  }
+}
